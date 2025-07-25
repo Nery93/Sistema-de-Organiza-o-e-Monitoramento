@@ -72,7 +72,7 @@ Para rodar os testes:
 - Estrutura modular para expansão futura
 
 ## 👨‍💻 Autor
-Desenvolvido por [Seu Nome] — Profissional Fullstack Laravel
+Desenvolvido por Guilherme Nery — Profissional Fullstack 
 
 Para dúvidas, sugestões ou contribuições, abra uma issue ou envie um pull request.
 

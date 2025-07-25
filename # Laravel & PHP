@@ -1,0 +1,38 @@
+# Laravel & PHP
+/vendor/
+/node_modules/
+/public/build/
+/public/css/
+/public/js/
+.env
+.phpunit.result.cache
+/storage/
+/bootstrap/cache/
+composer.lock
+npm-debug.log
+.DS_Store
+.idea/
+.vscode/
+*.log
+*.sqlite
+*.bak
+*.tmp
+*.swp
+*.swo
+*.zip
+*.tar.gz
+*.gz
+*.rar
+*.7z
+.env.*
+.env.backup
+.env.local
+.env.production
+.env.testing
+.env.development
+.env.example
+# OS
+Thumbs.db
+.DS_Store
+# Others
+coverage/

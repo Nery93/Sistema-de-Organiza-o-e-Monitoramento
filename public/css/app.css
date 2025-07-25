@@ -1,0 +1,476 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgba(248, 248, 249, 1);
+    margin: 0;
+    height: 100vh; 
+    overflow-x: hidden;
+
+}
+
+
+.sidebar {
+    width: 70px;
+    height: 100vh;
+    position: fixed;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px;
+    padding-bottom: 20px;
+    z-index: -1;
+    gap: 20px;
+    top: 0;
+}
+
+.stock-livre-button {
+    background-color: #2196F3;
+    color: white;
+    position: absolute;
+    height: 22px;
+    width: 91px;
+    padding: 5px 9px;
+    border-radius: 15px;
+    margin-left: 20px;
+    margin-top: 3px;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.breadcrumb .item-comum {
+    color: #A8A9AD;
+}
+
+.breadcrumb .breadcrumb-item.active {
+    color: #202532;
+    content: " > ";
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    position: relative;
+    top: 6px;
+
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    content: " > ";
+}
+
+li a {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px
+}
+
+/* Ícones da sidebar */
+.sidebar a img {
+    position: relative;
+    color: #333;
+    padding: 15px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-sidebar a {
+    transform: translateY(-80px);
+}
+
+.sidebar a img {
+    filter: brightness(0);
+    /* Preto */
+}
+
+/* Item ativo (fundo vermelho) */
+.sidebar a.active {
+    position: relative;
+    background-color: #dc3545;
+    border-radius: 5px;
+}
+
+.sidebar a.active img {
+    filter: brightness(0) invert(1);
+}
+
+.separator {
+    position: absolute;
+    width: 40px;
+    height: 1px;
+    background-color: #ddd;
+    bottom: 90px;
+}
+
+.bottom-icon {
+    position: absolute;
+    bottom: 16px;
+}
+
+.page-title {
+    margin: auto 130px;
+    position: relative;
+    top: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+
+}
+
+.filtros {
+    margin: auto 130px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    position: relative;
+    top: 80px;
+}
+
+.filters {
+    gap: 4px;
+}
+
+.login {
+    align-items: center;
+    display: flex;
+    position: relative;
+    margin-right: 30px;
+}
+
+.sub-title-create {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 0;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 30px 0 100px;
+}
+
+.title-create {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.button-clear-create {
+    margin-right: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.stock-badge {
+    background-color: #3498db;
+    /* Azul padrão */
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 5px 10px;
+    border-radius: 12px;
+    /* Deixa com bordas arredondadas */
+}
+
+.table {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 100%;
+    font-size: 12px;
+    height: 490px;
+    top: 317px;
+    left: 104px;
+    line-height: 20px;
+}
+
+.card-body-create {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: #FFFFFF;
+    width: 100%;
+}
+
+.card-body-create .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card-body-create .form-group {
+    flex-basis: calc(50% - 5px); /* Divide em duas colunas com espaçamento */
+    min-width: 200px; /* Largura mínima para os campos */
+}
+
+.card-body-create .form-group.full-width {
+    flex-basis: 100%; /* Ocupa a largura total */
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 600px) {
+    .card-body-create .form-group {
+        flex-basis: 100%; /* Ocupa a largura total em telas pequenas */
+    }
+}
+
+tr {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
+
+.table-responsive {
+    width: 95%;
+    position: relative;
+    left: 65px;
+    margin-top: 100px;
+}
+
+.cabecalho-principal th {
+    padding: 20px;
+    border-bottom: #333;
+}
+
+.filter-input {
+    background-color: #E9E9E9;
+    width: 120px;
+    height: 33px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+}
+
+.un-input,
+.categoria-input,
+.stock-diff-input {
+    background-color: #E9E9E9;
+    width: 84px;
+    height: 33px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+}
+
+.categoria-input {
+    width: 135px;
+    text-align: left;
+}
+
+
+.stock-diff-input {
+    text-align: left;
+    width: 174px;
+}
+
+.multiselect-options {
+    display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-height: 150px;
+    overflow-y: auto;
+    list-style: none;
+    padding: 5px;
+}
+
+.form-control {
+    background-color: #E9E9E9;
+}
+
+.artigos{
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #202532;
+}
+.export-csv {
+    font-family: 'Poppins' , sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #202532;
+    margin-top: 2px;
+}
+
+.rota-create {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #202532;
+    margin-left: 7px;
+    margin-top: 2px;
+}
+
+.father-div {
+    width: 95%;
+    position: relative;
+    left: 40px;
+    margin-top: 100px;
+}
+
+.information {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    bottom: 20px;
+}
+
+.container-footer {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 100vw;
+}
+
+footer {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    right: 0px
+}
+
+.btn-footer-create {
+    background-color: #E41A15;
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin-right: 20px;
+    gap: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-footer-create img {
+    margin-left: 5px;
+}
+
+.btn-footer-sair {
+    margin-right: 25px;
+    width: 142px;
+    font-weight: 600;
+}
+
+.btn-footer-sair:hover {
+    background-color: #E41A15;
+}
+
+.paginate {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.fa-sort {
+    color: #757575;
+}
+
+.fa-solid {
+    margin-left: 7px;
+}
+
+.SKU {
+    color: #202532;
+    text-decoration: none;
+}
+
+.EAN {
+    color: #202532;
+    text-decoration: none;
+}
+
+.UN {
+    color: #202532;
+    text-decoration: none;
+}
+
+.CATEGORIA {
+    color: #202532;
+    text-decoration: none;
+}
+
+.DESCRIÇÃO {
+    color: #202532;
+    text-decoration: none;
+}
+
+.DIFERENÇA_STOCK {
+    text-decoration: none;
+}
+
+.limpar-input {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+    margin-left: 4px; 
+    width: 11px;
+}
+
+.aplicar-input {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+    margin-left: 4px; 
+    width: 11px;
+    border: none;
+    border: none;
+    background: none;
+}
+
+.paginate .page-link {
+    background-color: white; 
+    color: black; 
+    border: 1px solid #ddd; 
+    transition: all 0.3s ease; 
+}
+
+.paginate .page-item.active .page-link {
+    background-color: #E41A15;
+    color: white; 
+    border-color: #E41A15; 
+}
+
+.paginate .page-link:hover {
+    background-color: #E41A15; 
+    color: white; 
+    border-color: #E41A15; 
+}
+
+
